@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uasproject/sellerloginscreen.dart';
+import 'package:uasproject/sellerregisterscreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +14,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SellerLoginScreen(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => SellerLoginScreen(),
+        '/register': (context) => SellerRegisterScreen(),
+      },
     );
   }
 }
